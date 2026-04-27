@@ -100,7 +100,7 @@ export function Footer() {
       </div>
 
       <div className="container flex flex-col gap-4 border-t editorial-rule py-6 text-xs text-muted md:flex-row md:items-center md:justify-between">
-        <p>&copy; 2026 Morrow & Sable. All rights reserved.</p>
+        <p>&copy; 2026 Morrow & Sable. All rights reserved. Developed by John Charles Frederick Mamanao.</p>
         <div className="flex gap-6">
           <Link href="/" className="transition-colors hover:text-foreground">
             Privacy
