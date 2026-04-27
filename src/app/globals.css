@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #101513;
+  --foreground: #f2eadf;
+  --primary: #b86b5b;
+  --primary-foreground: #fff8ef;
+  --secondary: #18211f;
+  --accent: #344139;
+  --muted: #a89d92;
+  --stone: #d8cbbb;
+  --moss: #5f6f63;
+  --linen: #f5ecdf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-stone: var(--stone);
+  --color-moss: var(--moss);
+  --color-linen: var(--linen);
+
+  --font-serif: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
+
+  --shadow-editorial: 0 40px 100px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 86rem;
+}
+
+@utility eyebrow {
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@utility editorial-rule {
+  border-color: color-mix(in oklab, var(--foreground) 14%, transparent);
+}
+
+@utility image-shade {
+  background:
+    linear-gradient(90deg, rgba(16, 21, 19, 0.93) 0%, rgba(16, 21, 19, 0.58) 38%, rgba(16, 21, 19, 0.16) 100%),
+    linear-gradient(0deg, rgba(16, 21, 19, 0.76) 0%, transparent 45%);
+}
